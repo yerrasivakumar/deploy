@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-
+const userRoutes = require('./routes/userrouter');
 const mongoose = require('mongoose')
 
 const bodyParser = require('body-parser');
@@ -10,7 +10,7 @@ mongoose.connect(dbHOST).then(() => console.log('Connected to MongoDB'))
 app.use(express.json());
 app.use(bodyParser.json());
 PORT = 7000
-
+app.use('/user', userRoutes);
 app.get('/', (req, res) => {
     res.send('products api running new deploy');
 });
