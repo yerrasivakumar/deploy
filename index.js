@@ -8,7 +8,15 @@ dbHOST ='mongodb+srv://siva:siva@cluster1.qaavblr.mongodb.net/?retryWrites=true&
 mongoose.connect(dbHOST).then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Error connecting to MongoDB:', err));
 app.use(express.json());
-app.use(cors())
+
+app.use(cors(
+    {
+        origin: ["https://deploy-five-kappa.vercel.app/"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
+
 app.use(bodyParser.json());
 PORT = 7000
 app.use('/user', userRoutes);
