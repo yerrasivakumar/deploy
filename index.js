@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use(cors(
     {
-        origin: ["https://deploy-five-kappa.vercel.app/"],
+        origin: ["https://deploy-five-kappa.vercel.app/user"],
         methods: ["POST", "GET"],
         credentials: true
     }
