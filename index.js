@@ -11,7 +11,7 @@ app.use(express.json());
 
 app.use(cors(
     {
-        origin: ["https://frontend-sepia-five-47.vercel.app/"],
+        origin: ["https://frontend-sepia-five-47.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
