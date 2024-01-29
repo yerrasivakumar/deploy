@@ -11,8 +11,8 @@ app.use(express.json());
 
 app.use(cors(
     {
-        origin: "https://frontend-sepia-five-47.vercel.app",
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        origin: ["https://deploy-five-kappa.vercel.app/"],
+        methods: ["POST", "GET"],
         credentials: true
     }
 ));
