@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors(
     {
         origin: "https://frontend-sepia-five-47.vercel.app/",
-        methods: "POST, GET,OPTIONS",
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true
     }
 ));
